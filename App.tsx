@@ -1,20 +1,26 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useState } from 'react';
+import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import fetchApiCall from './services/adminlogin';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import DashboardScreen from './pages/dashboard';
+import MainNavigation from './routing/MainNavigation';
+import { Provider } from 'react-redux';
+import store from './redux';
+import { MainNavigationProp } from './routing/types';
+import { MainRoutes } from './routing/routes';
 
-export default function App() {
+
+
+
+export default function App({ navigation }: HomeScreenProps) {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <Provider store={store}>
+      <StatusBar hidden />
+      <MainNavigation />
+    </Provider>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+
