@@ -35,8 +35,22 @@ function DashboardScreen({ navigation }: DashboardScreenProps): React.ReactEleme
                 </Row>
                 <Row>
                     <TouchableOpacity style={styles.loginBtn}
-                        onPress={() => navigation.navigate(MainRoutes.CreatePlayer)}>
-                        <Text>Create Player</Text>
+                        onPress={() => navigation.navigate(MainRoutes.CreatePositionRelationship)}>
+                        <Text>Create Position Relationship</Text>
+                    </TouchableOpacity>
+                </Row>
+            </Col>
+            <Col>
+                <Row>
+                    <TouchableOpacity style={styles.loginBtn}
+                        onPress={() => navigation.navigate(MainRoutes.CreatePersonality)}>
+                        <Text>Create Personality</Text>
+                    </TouchableOpacity>
+                </Row>
+                <Row>
+                    <TouchableOpacity style={styles.loginBtn}
+                        onPress={() => navigation.navigate(MainRoutes.CreatePersonalityRelationship)}>
+                        <Text>Create Personality Relationship</Text>
                     </TouchableOpacity>
                 </Row>
             </Col>

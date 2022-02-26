@@ -8,6 +8,9 @@ import LoginSection from '../pages/login'
 import CreatePlayerScreen from '../pages/createTemplatePlayer'
 import CreateAttributeScreen from '../pages/createAttribute'
 import CreatePositionScreen from '../pages/createPosition'
+import CreatePositionRelationshipScreen from '../pages/createPositionRelationship'
+import CreatePersonalityScreen from '../pages/createPersonality'
+import CreatePersonalityRelationshipScreen from '../pages/createPersonalityRelationship'
 
 
 const MainNavigation = (): React.ReactElement => {
@@ -20,7 +23,10 @@ const MainNavigation = (): React.ReactElement => {
                 <MainStack.Screen name={MainRoutes.CreatePlayer} component={CreatePlayerScreen} />
                 <MainStack.Screen name={MainRoutes.CreateAttribute} component={CreateAttributeScreen} />
                 <MainStack.Screen name={MainRoutes.CreatePosition} component={CreatePositionScreen} />
-                <MainStack.Screen name={MainRoutes.CreatePosition} component={CreatePositionRelationshipScreen} />
+                <MainStack.Screen name={MainRoutes.CreatePersonality} component={CreatePersonalityScreen} />
+                <MainStack.Screen name={MainRoutes.CreatePositionRelationship} component={CreatePositionRelationshipScreen} />
+                <MainStack.Screen name={MainRoutes.CreatePersonalityRelationship} component={CreatePersonalityRelationshipScreen} />
+
 
             </MainStack.Navigator>
         </NavigationContainer>
